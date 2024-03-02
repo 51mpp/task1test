@@ -2,13 +2,13 @@ from flask import Flask,jsonify
 
 app = Flask(__name__)
 
-@app.route('/is_prime/<a>',methods= ['GET'])
-def is_prime(a):
+@app.route('/is_prime/<X>',methods= ['GET'])
+def is_prime(X):
     try:
-        a = int(a)
+        X = int(X)
         result = True
-        for i in range(2,int(a/2)+1):
-            if a%i ==0:
+        for i in range(2,int(X/2)+1):
+            if X%i ==0:
                 result = False
                 break
     except ValueError:
